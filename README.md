@@ -1,2 +1,2 @@
 # My-Codes
-Find some my codes and other interesting codes that may help someone. 
+Please find some of my code and other interesting code snippets that may be helpful to someone. 
