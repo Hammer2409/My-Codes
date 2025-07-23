@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+Name: 		Esmat Talaash
+ID: 		2141821
+Subject 	Program02
+
+This program will read the file (in.txt) and copy its contents to file (out.txt). It will check if the file (in.txt) exists and will 
+give as error messages if failed to read. It will prompt the user to inter an integer and save that a variable. Also, it will keep 
+count of the number of integers read from file (in.txt) and will display it to the user. 
+*/
+
+int main()
+{
+    
+	int temp; //Temporary variable for to copy values from file in.txt. 
+	int user; //Int variable for user entered integer. 
+	int count = 0; //To keep count of the number if ints read from in.txt. 
+	
+	FILE * readp = fopen("in.txt", "r"); //Opening the file in.txt for reading. 
+	FILE * writep = fopen("out.txt", "w"); //Creating the file out.txt.
+	
+	if(readp == NULL)
+	{
+		printf("\aFile (in.txt) does not exist!\n"); //Give a ding sound and let the user know that the file does not exists. 
+	} 
+	else
+	{
+		printf("Please enter an integer: "); 
+		scanf("%d", &user); 
+		printf("\nYou entered: %d", user); 
+		
+		while((fscanf(readp, "%d", &temp))== 1)
+		{ 
+			fprintf(writep, "%d\n", temp); //Copying to the file. 
+			count++; //Incrementing the counter. 
+		}	
+		printf("\nThe number of ints in file (in.txt) is: %d\n", count); 	
+	}
+	
+	
+	return 0; 
+}
