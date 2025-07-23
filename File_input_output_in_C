@@ -3,7 +3,7 @@
 
 /*
 Name: 		Esmat Talaash
-ID: 		2141821
+ID: 		
 Subject 	Program02
 
 This program will read the file (in.txt) and copy its contents to file (out.txt). It will check if the file (in.txt) exists and will 
